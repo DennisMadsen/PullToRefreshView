@@ -82,8 +82,8 @@
 		subtitleLabel.textAlignment = UITextAlignmentCenter;
 		[self addSubview:subtitleLabel];
 
-		statusLabel = [[UILabel alloc] init];
-		statusLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, frame.size.height - 48.0f, self.frame.size.width, 20.0f)];
+        statusLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		statusLabel.font = [UIFont systemFontOfSize:12.f];
 		statusLabel.textColor = kPullToRefreshViewTitleColor;
         statusLabel.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
@@ -108,6 +108,7 @@
 #endif
 
 		[self.layer addSublayer:arrowImage];
+        [self setState:kPullToRefreshViewStateNormal];
 	}
 
 	return self;
