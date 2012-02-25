@@ -45,8 +45,6 @@ typedef enum {
 	UIScrollView *scrollView;
 	PullToRefreshViewState state;
 
-	UILabel *subtitleLabel;
-	UILabel *statusLabel;
 	CALayer *arrowImage;
 	CALayer *offlineImage;
 	UIActivityIndicatorView *activityView;
@@ -54,6 +52,8 @@ typedef enum {
 
 @property (nonatomic, readonly) UIScrollView *scrollView;
 @property (nonatomic, assign) id<PullToRefreshViewDelegate> delegate;
+@property (nonatomic, strong) UILabel *subtitleLabel;
+@property (nonatomic, strong) UILabel *statusLabel;
 
 - (void)refreshLastUpdatedDate;
 
